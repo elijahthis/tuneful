@@ -1,0 +1,80 @@
+@import "config";
+
+.section {
+  padding: 3rem;
+  h2 {
+    margin-top: 0.6rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.title {
+  color: $pink;
+  margin-bottom: 0;
+}
+
+.carousel {
+  width: max-content;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  transition: transform ease-in-out 0.5s;
+  padding-right: 2rem;
+}
+
+.banner-item {
+  width: 600px;
+  position: relative;
+  font-size: 0; // removes whitespace under nextJS image component
+  & > :nth-child(1) {
+    display: block;
+    border-radius: 8px;
+  }
+  & > :nth-child(2) {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    color: white;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    font-size: 1rem;
+    border-radius: 8px;
+
+    p {
+      margin: 1rem 0;
+    }
+
+    & > * {
+      margin-top: 70px;
+      & > :first-child {
+        font-size: 1.8rem;
+      }
+    }
+  }
+}
+
+.song-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  & > :first-child {
+    & > :first-child {
+      display: flex;
+      flex-direction: row;
+      gap: 2rem;
+    }
+  }
+}
+
+.bottom {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 5rem;
+  margin-top: 2rem;
+}
